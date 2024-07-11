@@ -9,11 +9,14 @@
 <body>
     <table style="width:100%" >
         <tr>
+          
           <th>usn</th>
           <th>name</th>
           <th>age</th>
           <th>branch</th>
           <th>section</th>
+          <th>id</th>
+        
           
         </tr>
        
@@ -26,6 +29,7 @@
       {
         ?>
         <tr>
+        
           <td>
             <?php echo $data['usn'];?>
           </td>
@@ -41,7 +45,13 @@
           <td>
             <?php echo $data['section'];?>
           </td>
+          <td>
+            <?php echo $data['id'];?>
+          </td>
+          <td><a href="delete.php?id=<?php echo $data['id'];?>">delete</a></td>
+          <td><a href="edit.php?id=<?php echo $data['id'];?>">edit</a></td>
         </tr>
+        
       
       <?php
       }
